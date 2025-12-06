@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/data/products";
-import heroImage from "@/assets/hero-sneakers.jpg";
+//import heroImage from "@/assets/hero-sneakers.jpg";
+import heroImage from "@/assets/product-headphones.jpg"
 import { useRef } from "react";
 
 const features = [
@@ -110,7 +111,7 @@ const Index = () => {
               variants={itemVariants}
               className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
             >
-              Effortless Shopping,{" "}
+              Shop Smarter,{" "}
               <span className="text-gradient">Refined Design</span>
             </motion.h1>
 
@@ -124,7 +125,7 @@ const Index = () => {
 
             <motion.div 
               variants={itemVariants}
-              className="flex flex-wrap gap-5"
+              className="flex flex-wrap gap-5 pt-4"
             >
               <Link to="/shop">
                 <Button variant="hero" size="xl" className="group">
@@ -148,6 +149,7 @@ const Index = () => {
                 {[1, 2, 3, 4].map((i) => (
                   <motion.div
                     key={i}
+                     
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5 + i * 0.1 }}
@@ -183,7 +185,7 @@ const Index = () => {
             initial={{ opacity: 0, scale: 0.95, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative lg:pl-8 z-10"
+            className="relative lg:pl-8 z-10 -mt-8 md:-mt-12 lg:-mt-16"
           >
             {/* Main Image Container */}
             <div className="relative">
@@ -199,7 +201,7 @@ const Index = () => {
               
               {/* Main Image */}
               <motion.div
-                className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-strong bg-secondary"
+                className="relative aspect-[4.5/5] rounded-3xl overflow-hidden shadow-strong bg-secondary"
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4 }}
               >
@@ -260,6 +262,68 @@ const Index = () => {
       </section>
 
       {/* Features Bar */}
+      {/* <section className="bg-secondary/50 py-10 border-y border-border">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="flex items-center gap-5"
+              >
+                <div className="w-14 h-14 bg-background rounded-2xl flex items-center justify-center shadow-soft">
+                  <feature.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="font-display font-semibold text-lg">{feature.title}</p>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+{/* //=========================================================================================================== */}
+
+      {/* Featured Products */}
+      <section className="py-20 md:py-24 bg-background">
+        <div className="max-w-7xl mx-auto container-padding">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+          >
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+                Featured Products
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-lg">
+                Handpicked essentials for those who appreciate quality and design
+              </p>
+            </div>
+            <Link to="/shop">
+              <Button variant="outline" size="lg" className="group">
+                View All
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {products.slice(0, 6).map((product, index) => (
+              <ProductCard key={product.id} product={product} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-secondary/50 py-10 border-y border-border">
         <div className="max-w-7xl mx-auto container-padding">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -285,44 +349,8 @@ const Index = () => {
         </div>
       </section>
 
-{/* //=========================================================================================================== */}
-
-      {/* Featured Products */}
-      <section className="section-padding bg-background">
-        <div className="max-w-7xl mx-auto container-padding">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
-          >
-            <div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-                Featured Products
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-lg">
-                Handpicked essentials for those who appreciate quality and design
-              </p>
-            </div>
-            <Link to="/shop">
-              <Button variant="outline" size="lg" className="group">
-                View All
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {products.slice(0, 6).map((product, index) => (
-              <ProductCard key={product.id} product={product} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Trending Categories */}
-      <section className="section-padding bg-background-muted">
+      <section className="py-20 md:py-24 bg-background-muted">
         <div className="max-w-7xl mx-auto container-padding">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -63,7 +63,7 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
     >
       <div className="relative">
         <Link to={`/product/${product.id}`}>
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-secondary mb-6 shadow-soft transition-shadow duration-700 group-hover:shadow-card">
+          <div className="relative aspect-[4/4] rounded-3xl overflow-hidden bg-secondary mb-6 shadow-soft transition-shadow duration-700 group-hover:shadow-card">
             {/* Badge */}
             {product.badge && (
               <motion.div 
