@@ -19,7 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/EaseCart">
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
