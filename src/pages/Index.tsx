@@ -90,7 +90,7 @@ const Index = () => {
           />
         </div>
         
-        <div className="relative max-w-7xl mx-auto container-padding grid lg:grid-cols-2 gap-12 lg:gap-24 items-center py-20 lg:py-32">
+        <div className="relative max-w-7xl mx-auto container-padding grid lg:grid-cols-2 gap-12 lg:gap-24 items-center py-20 lg:py-22">
           {/* Content */}
           <motion.div
             variants={containerVariants}
