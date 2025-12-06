@@ -68,7 +68,7 @@ export const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/40">
-            © 2024 EaseCart. All rights reserved.
+            © 2025 EaseCart. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-background/40">
             <a href="#" className="hover:text-background transition-colors">Privacy</a>

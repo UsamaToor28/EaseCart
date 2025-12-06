@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/data/products";
-//import heroImage from "@/assets/hero-sneakers.jpg";
 import heroImage from "@/assets/product-headphones.jpg"
 import { useRef } from "react";
 
@@ -104,7 +103,7 @@ const Index = () => {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold"
             >
               <Sparkles className="w-4 h-4" />
-              New Collection 2024
+              New Collection 2025
             </motion.div>
 
             <motion.h1 
